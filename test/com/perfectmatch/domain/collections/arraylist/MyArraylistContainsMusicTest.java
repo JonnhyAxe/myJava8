@@ -2,9 +2,6 @@ package com.perfectmatch.domain.collections.arraylist;
 
 import static org.junit.Assert.assertTrue;
 
-import java.util.List;
-
-import org.junit.Before;
 import org.junit.Test;
 
 import com.perfectmatch.domain.Music;
@@ -21,21 +18,12 @@ import com.perfectmatch.domain.collections.MusicCollectionsCommon;
  * Calls Music.equals() to find the specific element
  *
  */
-public class MyArraylistContainsMusicTest {
-
+public class MyArraylistContainsMusicTest extends MyArraylistBaseTest {
 
     /**
      *
      */
     private static final String LIST_DOES_NOT_HAVE = "List does not have ";
-
-    private List<Music> list;
-
-    @Before
-    public void setUp() {
-
-        list = MusicCollectionsCommon.geBobCollection();
-    }
 
     @Test
     public void ArrayListOfMusicContains() {
