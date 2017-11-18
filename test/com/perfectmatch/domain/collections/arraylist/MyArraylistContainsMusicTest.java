@@ -15,6 +15,12 @@ import com.perfectmatch.domain.collections.MusicCollectionsCommon;
 /**
  * My List Wrapper Test Suite
  *
+ * BigO(n) in the worst case scenario to find the specific Object
+ *
+ * Accept null, Object and any type object to contains without throwing Exception
+ *
+ * Calls Music.equals() to find the specific element
+ *
  */
 public class MyListWrapperContainsMusicTest {
 
@@ -29,15 +35,13 @@ public class MyListWrapperContainsMusicTest {
     @Before
     public void setUp() {
 
-        list = new ArrayList<Music>(0);
+        list = MusicCollectionsCommon.geBobCollection();
     }
 
     @Test
     public void ArrayListOfMusicContains() {
 
         // Given
-        list = MusicCollectionsCommon.geBobCollection();
-
         Music bob = new Music(MusicCollectionsCommon.BOB_MARLEY, MusicCollectionsCommon.NO_WOMAN_NO_CRY, MusicStyle.HOUSE);
 
         // When
@@ -54,8 +58,6 @@ public class MyListWrapperContainsMusicTest {
     public void ArrayListOfMusicDoNotHaveObjectAndDoNotThrowClassCast() {
 
         // Given
-        list = MusicCollectionsCommon.geBobCollection();
-
         Object bob = new Object();
 
         // When
@@ -69,7 +71,6 @@ public class MyListWrapperContainsMusicTest {
     public void ArrayListOfMusicDoNotHaveStringAndDoNotThrowClassCast() {
 
         // Given
-        list = MusicCollectionsCommon.geBobCollection();
 
         // When
         boolean contiansBobMarley = list.contains(MusicCollectionsCommon.BOB_MARLEY);
@@ -82,7 +83,6 @@ public class MyListWrapperContainsMusicTest {
     public void ArrayListOfMusicDoNotHaveNull() {
 
         // Given
-        list = MusicCollectionsCommon.geBobCollection();
 
         // When
         boolean contiansBobMarley = list.contains(null);
