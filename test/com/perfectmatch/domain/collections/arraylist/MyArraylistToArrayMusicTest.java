@@ -62,4 +62,32 @@ public class MyArraylistToArrayMusicTest extends MyArraylistBaseTest {
         }
     }
 
+    @Test(expected = NullPointerException.class)
+    public void ArrayListToArrayOfMusicExpectedNullPointerException() {
+
+        // Given
+
+        // When
+
+        // O(n) should traverse all the list
+        Music[] listToArray = list.toArray(null);
+
+        // Then
+        // @Test(expected = NullPointerException.class)
+
+    }
+
+    @Test(expected = ArrayStoreException.class)
+    public void ArrayListToArrayOfMusicExpectedArrayStoreException() {
+
+        // Given
+        String[] arrayOfStrings = new String[]{};
+
+        // When
+        String[] listToArray = list.toArray(arrayOfStrings);
+
+        // Then
+        // @Test(expected = ArrayStoreException.class)
+    }
+
 }
