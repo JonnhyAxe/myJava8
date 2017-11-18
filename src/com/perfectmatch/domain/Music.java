@@ -10,6 +10,7 @@
  */
 package com.perfectmatch.domain;
 
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -34,9 +35,9 @@ public class Music implements Comparable<Music> {
 
     private String musicName;
 
-    private Set<String> remixers;
-
     private MusicStyle style;
+
+    private Set<String> remixers;
 
     /**
      * @return the style
@@ -114,12 +115,8 @@ public class Music implements Comparable<Music> {
     @Override
     public int hashCode() {
 
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + (artist == null ? 0 : artist.hashCode());
-        result = prime * result + (musicName == null ? 0 : musicName.hashCode());
-        result = prime * result + (style == null ? 0 : style.hashCode());
-        return result;
+        return Objects.hash(artist, musicName, style);
+
     }
 
     /*
@@ -139,27 +136,11 @@ public class Music implements Comparable<Music> {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        Music other = (Music) obj;
-        if (artist == null) {
-            if (other.artist != null) {
-                return false;
-            }
-        }
-        else if (!artist.equals(other.artist)) {
-            return false;
-        }
-        if (musicName == null) {
-            if (other.musicName != null) {
-                return false;
-            }
-        }
-        else if (!musicName.equals(other.musicName)) {
-            return false;
-        }
-        if (style != other.style) {
-            return false;
-        }
-        return true;
+
+        Music that = (Music) obj;
+        return Objects.equals(this.artist, that.artist) &&
+                Objects.equals(this.musicName, that.musicName) &&
+                Objects.equals(this.style, that.style);
     }
 
     @Override
