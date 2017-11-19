@@ -22,7 +22,7 @@ public class MyHashSetContainsMusicTest extends MyHashsetBaseTest {
     private static final String LIST_DOES_NOT_HAVE = "List does not have ";
 
     @Test
-    public void ArrayListOfMusicContains() {
+    public void HashSetOfMusicContains() {
 
         // Given
         Music bob = new Music(MusicCollectionsCommon.BOB_MARLEY, MusicCollectionsCommon.NO_WOMAN_NO_CRY, MusicStyle.HOUSE);
@@ -30,47 +30,47 @@ public class MyHashSetContainsMusicTest extends MyHashsetBaseTest {
         // When
         // O(1) because it uses the hash
         // calls Music.equals
-        boolean contiansNoWomanNoCry = set.contains(bob);
+        boolean containsNoWomanNoCry = set.contains(bob);
 
         // Then
-        assertTrue(LIST_DOES_NOT_HAVE + MusicCollectionsCommon.NO_WOMAN_NO_CRY, contiansNoWomanNoCry);
+        assertTrue(LIST_DOES_NOT_HAVE + MusicCollectionsCommon.NO_WOMAN_NO_CRY, containsNoWomanNoCry);
     }
 
     @Test
-    public void ArrayListOfMusicDoNotHaveObjectAndDoNotThrowClassCast() {
+    public void HashSetOfMusicDoNotHaveObjectAndDoNotThrowClassCast() {
 
         // Given
         Object bob = new Object();
 
         // When
-        boolean contiansBobObject = set.contains(bob);
+        boolean containsBobObject = set.contains(bob);
 
         // Then - do not throw ClassCastException
-        assertTrue(contiansBobObject == false);
+        assertTrue(containsBobObject == false);
     }
 
     @Test
-    public void ArrayListOfMusicDoNotHaveStringAndDoNotThrowClassCast() {
+    public void HashSetOfMusicDoNotHaveStringAndDoNotThrowClassCast() {
 
         // Given
 
         // When
-        boolean contiansBobMarley = set.contains(MusicCollectionsCommon.BOB_MARLEY);
+        boolean containsBobMarley = set.contains(MusicCollectionsCommon.BOB_MARLEY);
 
         // Then - do not throw ClassCastException
-        assertFalse(contiansBobMarley);
+        assertFalse(containsBobMarley);
     }
 
     @Test
-    public void ArrayListOfMusicDoNotHaveNull() {
+    public void HashSetOfMusicDoNotHaveNull() {
 
         // Given
 
         // When
-        boolean contiansBobMarley = set.contains(null);
+        boolean containsBobMarley = set.contains(null);
 
         // Then - do not throw NullPointerException
-        assertFalse(contiansBobMarley);
+        assertFalse(containsBobMarley);
     }
 
 }
