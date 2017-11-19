@@ -11,16 +11,14 @@ import com.perfectmatch.domain.MusicStyle;
 import com.perfectmatch.domain.collections.MusicCollectionsCommon;
 
 /**
- *  My HashSet AddMusicTest
+ * My HashSet AddMusicTest
+ *
+ * add() hash BigO(1) and calls hash() implementation of the key
+ *
+ * add() accepts null element
  *
  */
 public class MyHashSetAddMusicTest extends MyHashsetBaseTest {
-
-
-    /**
-     *
-     */
-    private static final String BOB_MUSIC_INSTANCE_SHOULD_BE_EQUAL = "Bob Music instance SHOULD be equal";
 
     /**
      *
@@ -40,8 +38,8 @@ public class MyHashSetAddMusicTest extends MyHashsetBaseTest {
         int size = set.size();
 
         // When
-        boolean addedBob = set.add(bob); // the element exists, therefore do not
-                                         // added it
+        boolean addedBob = set.add(bob); // call hash() to determine if the
+                                         // element exists
 
         // Then
         assertFalse(THE_ELEMENT_SHOULD_NOT_BE_ADDED_TO_THE_LIST, addedBob);

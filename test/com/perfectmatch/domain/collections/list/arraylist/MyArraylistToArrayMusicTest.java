@@ -70,7 +70,7 @@ public class MyArraylistToArrayMusicTest extends MyArraylistBaseTest {
         // When
 
         // O(n) should traverse all the list
-        Music[] listToArray = list.toArray(null);
+        list.toArray(null);
 
         // Then
         // @Test(expected = NullPointerException.class)
@@ -84,7 +84,7 @@ public class MyArraylistToArrayMusicTest extends MyArraylistBaseTest {
         String[] arrayOfStrings = new String[]{};
 
         // When
-        String[] listToArray = list.toArray(arrayOfStrings);
+        list.toArray(arrayOfStrings);
 
         // Then
         // @Test(expected = ArrayStoreException.class)
