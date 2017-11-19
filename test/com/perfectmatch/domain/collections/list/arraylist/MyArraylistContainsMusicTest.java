@@ -1,5 +1,6 @@
 package com.perfectmatch.domain.collections.list.arraylist;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -37,7 +38,7 @@ public class MyArraylistContainsMusicTest extends MyArraylistBaseTest {
         boolean contiansNoWomanNoCry = list.contains(bob);
 
         // Then
-        assertTrue(LIST_DOES_NOT_HAVE + MusicCollectionsCommon.NO_WOMAN_NO_CRY, contiansNoWomanNoCry == true);
+        assertTrue(LIST_DOES_NOT_HAVE + MusicCollectionsCommon.NO_WOMAN_NO_CRY, contiansNoWomanNoCry);
     }
 
 
@@ -51,7 +52,7 @@ public class MyArraylistContainsMusicTest extends MyArraylistBaseTest {
         boolean contiansBobObject = list.contains(bob);
 
         // Then - do not throw ClassCastException
-        assertTrue(contiansBobObject == false);
+        assertFalse(contiansBobObject);
     }
 
     @Test
@@ -63,7 +64,7 @@ public class MyArraylistContainsMusicTest extends MyArraylistBaseTest {
         boolean contiansBobMarley = list.contains(MusicCollectionsCommon.BOB_MARLEY);
 
         // Then - do not throw ClassCastException
-        assertTrue(contiansBobMarley == false);
+        assertFalse(contiansBobMarley);
     }
 
     @Test
@@ -75,7 +76,7 @@ public class MyArraylistContainsMusicTest extends MyArraylistBaseTest {
         boolean contiansBobMarley = list.contains(null);
 
         // Then - do not throw NullPointerException
-        assertTrue(contiansBobMarley == false);
+        assertFalse(contiansBobMarley);
     }
 
 }
