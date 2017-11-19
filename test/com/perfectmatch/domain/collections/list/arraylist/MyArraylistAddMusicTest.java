@@ -22,6 +22,11 @@ public class MyArraylistAddMusicTest extends MyArraylistBaseTest {
     /**
      *
      */
+    private static final String BOB_MUSIC_INSTANCE_SHOULD_BE_EQUAL = "Bob Music instance SHOULD be equal";
+
+    /**
+     *
+     */
     private static final String THE_ELEMENT_SHOULD_BE_ADDED_TO_THE_LIST = "The element should be added to the list";
 
     @Test
@@ -39,6 +44,34 @@ public class MyArraylistAddMusicTest extends MyArraylistBaseTest {
         assertEquals(size + 1, list.size());
     }
 
+    @Test
+    public void ArrayListOfMusicAddsNewMusicAtTheEnd() {
+
+        // Given
+        Music bob = new Music(MusicCollectionsCommon.BOB_MARLEY, MusicCollectionsCommon.NO_WOMAN_NO_CRY, MusicStyle.HOUSE);
+
+        // When
+        boolean addedBob = list.add(bob);
+        Music addedBobMusic = list.get(list.size() - 1);
+
+        // Then
+        assertTrue(THE_ELEMENT_SHOULD_BE_ADDED_TO_THE_LIST, addedBob);
+        assertTrue(BOB_MUSIC_INSTANCE_SHOULD_BE_EQUAL, bob.equals(addedBobMusic));
+    }
+
+    @Test
+    public void ArrayListOfMusicAddsNewMusicAtSpecificposition() {
+
+        // Given
+        Music bob = new Music(MusicCollectionsCommon.BOB_MARLEY, MusicCollectionsCommon.NO_WOMAN_NO_CRY, MusicStyle.HOUSE);
+
+        // When
+        list.add(0, bob);
+        Music addedBobMusic = list.get(0);
+
+        // Then
+        assertTrue(BOB_MUSIC_INSTANCE_SHOULD_BE_EQUAL, bob.equals(addedBobMusic));
+    }
 
     @Test
     public void ArrayListOfMusicAddsNullMusic() {

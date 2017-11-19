@@ -9,6 +9,8 @@ import com.perfectmatch.domain.collections.MusicCollectionsCommon;
 
 /**
  * Base class to reuse Commons data structures
+ * 
+ * ArrayList accept null values and are added
  *
  */
 public class MyArraylistBaseTest {
