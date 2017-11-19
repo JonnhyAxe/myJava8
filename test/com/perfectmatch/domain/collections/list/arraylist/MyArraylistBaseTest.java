@@ -1,4 +1,4 @@
-package com.perfectmatch.domain.collections.arraylist;
+package com.perfectmatch.domain.collections.list.arraylist;
 
 import java.util.List;
 
