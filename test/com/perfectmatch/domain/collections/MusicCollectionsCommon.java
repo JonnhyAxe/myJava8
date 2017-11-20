@@ -17,23 +17,36 @@ public final class MusicCollectionsCommon {
     /**
      *
      */
+    private static final String ONE_LOVE = "One Love";
+
+    /**
+     *
+     */
+    private static final String REDEMPTION_SONG = "Redemption Song";
+    /**
+     *
+     */
     public static final String NO_WOMAN_NO_CRY = "No Woman No Cry";
+
+    /**
+    *
+    */
     public static final String BOB_MARLEY = "Bob Marley";
 
     /**
      *
      */
-    private static final Music MUSIC_3 = new Music(BOB_MARLEY, "One Love", MusicStyle.HOUSE);
+    public static final Music MUSIC_3 = new Music(BOB_MARLEY, ONE_LOVE, MusicStyle.HOUSE);
 
     /**
      *
      */
-    private static final Music MUSIC_2 = new Music(BOB_MARLEY, "Redemption Song", MusicStyle.HOUSE);
+    public static final Music MUSIC_2 = new Music(BOB_MARLEY, REDEMPTION_SONG, MusicStyle.HOUSE);
 
     /**
      *
      */
-    private static final Music MUSIC_1 = new Music(BOB_MARLEY, NO_WOMAN_NO_CRY, MusicStyle.HOUSE);
+    public static final Music MUSIC_1 = new Music(BOB_MARLEY, NO_WOMAN_NO_CRY, MusicStyle.HOUSE);
 
     public static List<Music> geBobCollection() {
 
@@ -43,15 +56,6 @@ public final class MusicCollectionsCommon {
         listOfMusics.add(MUSIC_2);
         listOfMusics.add(MUSIC_3);
 
-        // boolean bool = listOfMusics.contains(bob);
-        //
-        // Iterator<Music> it = listOfMusics.iterator();
-        //
-        // ListIterator<Music> listIt = listOfMusics.listIterator();
-        //
-        // it = bobMusic.iterator();
-        //
-        // bobMusic.contains(bob);
         return listOfMusics;
     }
 
