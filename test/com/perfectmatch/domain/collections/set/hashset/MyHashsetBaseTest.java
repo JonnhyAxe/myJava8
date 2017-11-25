@@ -11,10 +11,10 @@ import com.perfectmatch.domain.collections.MusicCollectionsCommon;
  * Base class to reuse Commons data structures
  *
  * Set do not accept null values
- * 
- * Put/Get are BigO(1)
- * 
- * 
+ *
+ * add/remove/contains are BigO(1)
+ *
+ *
  *
  */
 public class MyHashsetBaseTest {

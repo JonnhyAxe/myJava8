@@ -2,6 +2,7 @@ package com.perfectmatch.domain.collections;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
@@ -36,25 +37,36 @@ public final class MusicCollectionsCommon {
     /**
      *
      */
-    public static final Music MUSIC_3 = new Music(BOB_MARLEY, ONE_LOVE, MusicStyle.HOUSE);
+    public static final Music MUSIC_ONE_LOVE = new Music(BOB_MARLEY, ONE_LOVE, MusicStyle.HOUSE);
 
     /**
      *
      */
-    public static final Music MUSIC_2 = new Music(BOB_MARLEY, REDEMPTION_SONG, MusicStyle.HOUSE);
+    public static final Music MUSIC_REDMPTION_SONG = new Music(BOB_MARLEY, REDEMPTION_SONG, MusicStyle.HOUSE);
 
     /**
      *
      */
-    public static final Music MUSIC_1 = new Music(BOB_MARLEY, NO_WOMAN_NO_CRY, MusicStyle.HOUSE);
+    public static final Music MUSIC_NO_WOMAN_NO_CRY = new Music(BOB_MARLEY, NO_WOMAN_NO_CRY, MusicStyle.HOUSE);
 
-    public static List<Music> geBobCollection() {
+    public static List<Music> geBobArrayList() {
 
         List<Music> listOfMusics = new ArrayList<>();
 
-        listOfMusics.add(MUSIC_1);
-        listOfMusics.add(MUSIC_2);
-        listOfMusics.add(MUSIC_3);
+        listOfMusics.add(MUSIC_NO_WOMAN_NO_CRY);
+        listOfMusics.add(MUSIC_REDMPTION_SONG);
+        listOfMusics.add(MUSIC_ONE_LOVE);
+
+        return listOfMusics;
+    }
+
+    public static List<Music> geBobLinkedList() {
+
+        List<Music> listOfMusics = new LinkedList<>();
+
+        listOfMusics.add(MUSIC_NO_WOMAN_NO_CRY);
+        listOfMusics.add(MUSIC_REDMPTION_SONG);
+        listOfMusics.add(MUSIC_ONE_LOVE);
 
         return listOfMusics;
     }
@@ -63,9 +75,9 @@ public final class MusicCollectionsCommon {
 
         Set<Music> setOfMusics = new HashSet<>();
 
-        setOfMusics.add(MUSIC_1);
-        setOfMusics.add(MUSIC_2);
-        setOfMusics.add(MUSIC_3);
+        setOfMusics.add(MUSIC_NO_WOMAN_NO_CRY);
+        setOfMusics.add(MUSIC_REDMPTION_SONG);
+        setOfMusics.add(MUSIC_ONE_LOVE);
 
         return setOfMusics;
     }

@@ -1,4 +1,4 @@
-package com.perfectmatch.domain.collections.list.arraylist;
+package com.perfectmatch.domain.collections.list.linkedlist;
 
 import java.util.List;
 
@@ -10,14 +10,15 @@ import com.perfectmatch.domain.collections.MusicCollectionsCommon;
 /**
  * Base class to reuse Commons data structures
  *
- * ArrayList accept null values and are added to end of the list (array in the
- * case of the ArrayList implementation)
+ * LinkedList accept null values and are added to end of the list
  *
- * Get/Set are BigO(1)
+ * add/remove first/last are BigO(1)
  *
- * Add/Remove are BigO(n) in the worst case scenario
+ * contains/remove is BigO(n)
+ *
+ * Get/Set are BigO(n) in the worst case scenario
  */
-public class MyArraylistBaseTest {
+public class MyLinkedListBaseTest {
 
     protected List<Music> list;
 

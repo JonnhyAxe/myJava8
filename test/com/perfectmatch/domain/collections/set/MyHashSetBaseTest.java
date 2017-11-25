@@ -13,7 +13,7 @@ import com.perfectmatch.domain.collections.MusicCollectionsCommon;
  * Set do not accept null values
  *
  */
-public class MyHashsetBaseTest {
+public class MyHashSetBaseTest {
 
     protected Set<Music> set;
 
