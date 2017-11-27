@@ -1,11 +1,14 @@
 package com.perfectmatch.domain.collections;
 
 import java.util.ArrayList;
+import java.util.EnumSet;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.CopyOnWriteArrayList;
 
+import com.perfectmatch.domain.BobAlbum;
 import com.perfectmatch.domain.Music;
 import com.perfectmatch.domain.MusicStyle;
 
@@ -60,6 +63,17 @@ public final class MusicCollectionsCommon {
         return listOfMusics;
     }
 
+    public static List<Music> geBobCopyOnArrayList() {
+
+        List<Music> listOfMusics = new CopyOnWriteArrayList<>();
+
+        listOfMusics.add(MUSIC_NO_WOMAN_NO_CRY);
+        listOfMusics.add(MUSIC_REDMPTION_SONG);
+        listOfMusics.add(MUSIC_ONE_LOVE);
+
+        return listOfMusics;
+    }
+
     public static List<Music> geBobLinkedList() {
 
         List<Music> listOfMusics = new LinkedList<>();
@@ -80,6 +94,13 @@ public final class MusicCollectionsCommon {
         setOfMusics.add(MUSIC_ONE_LOVE);
 
         return setOfMusics;
+    }
+
+    public static Set<BobAlbum> geBobEmptyEnumSetCollection() {
+
+        // EnumSupplier
+        return EnumSet.noneOf(BobAlbum.class);
+
     }
 
 }
